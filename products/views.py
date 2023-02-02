@@ -5,7 +5,7 @@ from .models import Product
 # Create your views here.
 def index(request):
     products = Product.objects.all()
-    return render(request,'index.html',{'products':products})
+    return render(request,'products.html',{'products':products})
     # return HttpResponse("<h1>Hey!</h1>")
 
 def about(request):
@@ -13,3 +13,4 @@ def about(request):
 
 def contact(request):
     return HttpResponse("<h1>Contact Me!</h1>")
+
